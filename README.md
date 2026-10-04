@@ -1,25 +1,75 @@
 # Marketing Campaign Performance Analysis
 
-## Overview
+Power BI dashboard for analyzing marketing campaign performance,
+channel effectiveness, customer conversion, and advertising efficiency.
 
-This project analyzes marketing campaign performance using Power BI.
+---
 
-The objective is to evaluate campaign efficiency, channel performance,
-conversion funnel and advertising costs to identify high-performing
-campaigns and areas for improvement.
+## Project Overview
 
-## Tools
+This project provides an interactive analysis of marketing campaign
+performance across campaigns, campaign types, and marketing channels.
 
-- Power BI
-- Power Query
-- DAX
-- Excel
+The dashboard is designed to support performance monitoring, campaign
+comparison, budget evaluation, and data-driven marketing decisions.
+
+---
+
+## Business Objectives
+
+- Evaluate overall marketing campaign performance
+- Measure advertising efficiency and return on investment
+- Compare campaign and channel performance
+- Analyze the conversion funnel from impressions to conversions
+- Identify high-performing and underperforming campaigns
+- Identify opportunities for campaign and budget optimization
+
+---
+
+## Dataset
+
+The dataset contains marketing campaign performance data, including:
+
+- Campaign
+- Campaign Type
+- Marketing Channel
+- Impressions
+- Clicks
+- Conversions
+- Spend
+- Revenue
+- Date
+
+### Marketing Channels
+
+- Email
+- Search Ads
+- Social Media
+- Display Ads
+
+---
+
+## Key Performance Indicators
+
+| KPI | Description |
+|---|---|
+| Total Spend | Total advertising expenditure |
+| Total Revenue | Revenue generated from campaigns |
+| ROAS | Return on advertising spend |
+| CTR | Click-through rate |
+| CVR | Conversion rate |
+| CPA | Cost per acquisition |
+| Total Conversions | Number of recorded conversions |
+
+---
 
 ## Dashboard
 
-The dashboard consists of four main sections:
+The dashboard is structured into four analytical views:
 
-### 1. Overview
+### 01. Overview
+
+Provides a high-level summary of marketing performance, including:
 
 - Total Spend
 - Total Revenue
@@ -28,66 +78,106 @@ The dashboard consists of four main sections:
 - CTR
 - CVR
 - CPA
-- Spend & Revenue by Month
+- Monthly Spend & Revenue
 - ROAS by Channel
 - Spend by Campaign Type
 - ROAS by Campaign
 
-### 2. Campaign & Channel Analysis
+### 02. Campaign & Channel Analysis
+
+Provides a detailed comparison of campaign and channel efficiency:
 
 - Campaign Ranking
-- Spend vs ROAS by Campaign
+- Spend vs. ROAS
 - Campaign × Channel ROAS
 - CPA by Campaign Type
 
-### 3. Funnel & Trends
+### 03. Funnel & Trends
 
-- Total Impressions
-- Total Clicks
-- Total Conversions
-- CTR & CVR by Channel
+Evaluates the marketing conversion funnel and performance trends:
+
+- Impressions
+- Clicks
+- Conversions
+- CTR by Channel
+- CVR by Channel
 - CTR & CVR by Month
 - CPA by Month
 
-### 4. Insights & Recommendations
+### 04. Insights & Recommendations
 
-The analysis identifies high-performing campaigns and channels,
-underperforming campaign types, cost anomalies and potential
-conversion-tracking issues.
+Highlights key performance drivers, inefficient campaigns,
+performance anomalies, and opportunities for marketing optimization.
+
+---
 
 ## Key Insights
 
-- Total advertising spend was **$13.67K**, generating **$54.42K**
-  in revenue with an overall **ROAS of 3.98**.
-- Retention campaigns achieved the highest ROAS, ranging from
-  **6.78 to 6.97**.
-- Sales Activation accounted for **40.9% of total spend** while
-  maintaining strong performance.
-- Email achieved the highest channel ROAS at **5.09**.
-- Brand Awareness showed relatively weak performance, with ROAS
-  below 2 and CPA of **$83.58**.
-- August showed an unusual increase in CPA and a decline in CVR.
-- Display Ads showed a potential data-quality issue because CVR
-  was 0% while ROAS remained positive.
+### Campaign Performance
+
+- Retention campaigns delivered the strongest ROAS performance,
+  reaching up to **6.97**.
+- Sales Activation generated strong returns while accounting for
+  **40.9% of total campaign spend**.
+- **11.11 Mega Sale** generated the highest campaign revenue at
+  **$12.63K** with a CPA of **$6.44**.
+
+### Channel Performance
+
+- **Email** recorded the highest ROAS at **5.09**.
+- **Search Ads** achieved the highest CVR at **11.8%**.
+- Social Media showed relatively lower conversion efficiency.
+- Display Ads showed a potential conversion-tracking or
+  data-quality issue, with **0.0% CVR** despite positive ROAS.
+
+### Campaign Type Performance
+
+- Sales Activation demonstrated strong efficiency with the lowest
+  campaign-type CPA at **$7.79**.
+- Brand Awareness showed comparatively weak efficiency, with
+  **25.07% of total spend** and a CPA of **$83.58**.
+- Lead Generation produced moderate CPA performance but ROAS remained
+  below the overall campaign average.
+
+### Time-Based Performance
+
+- Overall campaign performance improved toward the end of the year.
+- August showed a significant increase in CPA and a decline in CVR.
+- October and November showed stronger conversion efficiency and lower CPA.
+
+---
 
 ## Recommendations
 
-- Review spending on underperforming Brand Awareness campaigns.
-- Gradually increase budget for high-performing Sales Activation
-  and Retention campaigns.
-- Investigate conversion tracking for Display Ads.
-- Optimize Social Media campaigns to improve CVR.
-- Prioritize Email and Search Ads based on campaign efficiency.
+- Reallocate budget away from consistently underperforming
+  Brand Awareness campaigns.
+- Scale high-performing Sales Activation and Retention campaigns
+  while monitoring incremental CPA.
+- Prioritize Email and Search Ads based on their strong efficiency
+  and conversion performance.
+- Investigate Display Ads conversion tracking before making major
+  budget allocation decisions.
+- Optimize Social Media campaigns to improve conversion efficiency.
+- Review the performance drivers behind the August anomaly and
+  replicate successful patterns observed later in the year.
 
-## Files
+---
 
-- `Marketing_Campaign_Dashboard.pdf` - Dashboard preview
-- `Marketing_Campaign_Performance_Analysis.pbix` - Power BI report
+## Tools & Technologies
 
-## Dashboard Preview
+- **Power BI** — Dashboard & Data Visualization
+- **Power Query** — Data Transformation
+- **DAX** — KPI & Measure Development
+- **Microsoft Excel** — Data Source
 
-The full dashboard is available in the PDF file above.
+---
 
-## Author
+## Project Structure
 
-**Kieu Anh Nguyen Ha**
+```text
+marketing-campaign-powerbi/
+│
+├── Marketing_Campaign_Data.xlsx
+├── Marketing_Campaign_Performance_Analysis.pbix
+├── Marketing_Campaign_Dashboard.pdf
+└── README.md
