@@ -2,8 +2,6 @@
 
 Interactive Power BI dashboard analyzing campaign performance across campaigns, campaign types and channels, from advertising efficiency (ROAS, CPA) to the conversion funnel.
 
-![Dashboard Overview](images/01_overview.png)
-
 📄 [View full dashboard (PDF)](Marketing_Campaign_Dashboard.pdf)
 
 ## Business Question
@@ -19,9 +17,6 @@ $13.67K of ad spend generated $54.42K in revenue (**ROAS 3.98**) and 1,129 conve
 | **Campaign & Channel Analysis** | Campaign ranking, Spend vs ROAS, Campaign × Channel heat map, CPA by type |
 | **Funnel & Trends** | Impressions → clicks → conversions, CTR / CVR / CPA trends |
 | **Insights & Recommendations** | What works, what to improve, next steps |
-
-![Campaign & Channel Analysis](images/02_campaign_channel_analysis.png)
-![Funnel & Trends](images/03_funnel_trends.png)
 
 ## KPIs
 
@@ -61,7 +56,6 @@ Power BI · Power Query · DAX · Excel
 ## Repository
 
 ```
-├── images/                                       # Dashboard screenshots
 ├── Marketing_Campaign_Data.xlsx                  # Data source
 ├── Marketing_Campaign_Performance_Analysis.pbix  # Power BI file
 ├── Marketing_Campaign_Dashboard.pdf              # Exported dashboard
