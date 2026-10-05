@@ -1,183 +1,73 @@
-# Marketing Campaign Performance Analysis
+# Marketing Campaign Performance Analysis 2024
 
-Power BI dashboard for analyzing marketing campaign performance,
-channel effectiveness, customer conversion, and advertising efficiency.
+Interactive Power BI dashboard analyzing campaign performance across campaigns, campaign types and channels, from advertising efficiency (ROAS, CPA) to the conversion funnel.
 
----
+![Dashboard Overview](images/01_overview.png)
 
-## Project Overview
+📄 [View full dashboard (PDF)](Marketing_Campaign_Dashboard.pdf)
 
-This project provides an interactive analysis of marketing campaign
-performance across campaigns, campaign types, and marketing channels.
+## Business Question
 
-The dashboard is designed to support performance monitoring, campaign
-comparison, budget evaluation, and data-driven marketing decisions.
-
----
-
-## Business Objectives
-
-- Evaluate overall marketing campaign performance
-- Measure advertising efficiency and return on investment
-- Compare campaign and channel performance
-- Analyze the conversion funnel from impressions to conversions
-- Identify high-performing and underperforming campaigns
-- Identify opportunities for campaign and budget optimization
-
----
-
-## Dataset
-
-The dataset contains marketing campaign performance data, including:
-
-- Campaign
-- Campaign Type
-- Marketing Channel
-- Impressions
-- Clicks
-- Conversions
-- Spend
-- Revenue
-- Date
-
-### Marketing Channels
-
-- Email
-- Search Ads
-- Social Media
-- Display Ads
-
----
-
-## Key Performance Indicators
-
-| KPI | Description |
-|---|---|
-| Total Spend | Total advertising expenditure |
-| Total Revenue | Revenue generated from campaigns |
-| ROAS | Return on advertising spend |
-| CTR | Click-through rate |
-| CVR | Conversion rate |
-| CPA | Cost per acquisition |
-| Total Conversions | Number of recorded conversions |
-
----
+**Where should the next marketing dollar go?**
+$13.67K of ad spend generated $54.42K in revenue (**ROAS 3.98**) and 1,129 conversions, but results vary widely: the best campaigns return 5 to 7× their spend, the weakest less than 2×.
 
 ## Dashboard
 
-The dashboard is structured into four analytical views:
+| Page | What it shows |
+| --- | --- |
+| **Overview** | 7 KPI cards, monthly spend vs revenue, ROAS by channel and campaign |
+| **Campaign & Channel Analysis** | Campaign ranking, Spend vs ROAS, Campaign × Channel heat map, CPA by type |
+| **Funnel & Trends** | Impressions → clicks → conversions, CTR / CVR / CPA trends |
+| **Insights & Recommendations** | What works, what to improve, next steps |
 
-### 01. Overview
+![Campaign & Channel Analysis](images/02_campaign_channel_analysis.png)
+![Funnel & Trends](images/03_funnel_trends.png)
 
-Provides a high-level summary of marketing performance, including:
+## KPIs
 
-- Total Spend
-- Total Revenue
-- ROAS
-- Total Conversions
-- CTR
-- CVR
-- CPA
-- Monthly Spend & Revenue
-- ROAS by Channel
-- Spend by Campaign Type
-- ROAS by Campaign
-
-### 02. Campaign & Channel Analysis
-
-Provides a detailed comparison of campaign and channel efficiency:
-
-- Campaign Ranking
-- Spend vs. ROAS
-- Campaign × Channel ROAS
-- CPA by Campaign Type
-
-### 03. Funnel & Trends
-
-Evaluates the marketing conversion funnel and performance trends:
-
-- Impressions
-- Clicks
-- Conversions
-- CTR by Channel
-- CVR by Channel
-- CTR & CVR by Month
-- CPA by Month
-
-### 04. Insights & Recommendations
-
-Highlights key performance drivers, inefficient campaigns,
-performance anomalies, and opportunities for marketing optimization.
-
----
+| KPI | Formula | Result |
+| --- | --- | --- |
+| ROAS | Revenue ÷ Spend | 3.98 |
+| CTR | Clicks ÷ Impressions | 5.9% |
+| CVR | Conversions ÷ Clicks | 7.4% |
+| CPA | Spend ÷ Conversions | $12.11 |
 
 ## Key Insights
 
-### Campaign Performance
-
-- Retention campaigns delivered the strongest ROAS performance,
-  reaching up to **6.97**.
-- Sales Activation generated strong returns while accounting for
-  **40.9% of total campaign spend**.
-- **11.11 Mega Sale** generated the highest campaign revenue at
-  **$12.63K** with a CPA of **$6.44**.
-
-### Channel Performance
-
-- **Email** recorded the highest ROAS at **5.09**.
-- **Search Ads** achieved the highest CVR at **11.8%**.
-- Social Media showed relatively lower conversion efficiency.
-- Display Ads showed a potential conversion-tracking or
-  data-quality issue, with **0.0% CVR** despite positive ROAS.
-
-### Campaign Type Performance
-
-- Sales Activation demonstrated strong efficiency with the lowest
-  campaign-type CPA at **$7.79**.
-- Brand Awareness showed comparatively weak efficiency, with
-  **25.07% of total spend** and a CPA of **$83.58**.
-- Lead Generation produced moderate CPA performance but ROAS remained
-  below the overall campaign average.
-
-### Time-Based Performance
-
-- Overall campaign performance improved toward the end of the year.
-- August showed a significant increase in CPA and a decline in CVR.
-- October and November showed stronger conversion efficiency and lower CPA.
-
----
+- **Retention has the best ROAS** (up to 6.97) while using only 11.15% of spend.
+- **Sales Activation** takes the largest share (40.9%) and stays efficient: lowest CPA ($7.79), ROAS 5.15 to 5.21.
+- **Brand Awareness is the weak spot**: 25.07% of spend, ROAS below 2 on all 3 campaigns, CPA $83.58 (over 10× Sales Activation).
+- **Email leads on ROAS (5.09), Search Ads on conversion (CVR 11.8%).**
+- **Display Ads data looks inconsistent**: 0.0% CVR but ROAS 3.38, a possible conversion-tracking issue.
+- **August is an anomaly**: CPA spiked to about $76 (6× the average); performance recovered strongly in October and November.
 
 ## Recommendations
 
-- Reallocate budget away from consistently underperforming
-  Brand Awareness campaigns.
-- Scale high-performing Sales Activation and Retention campaigns
-  while monitoring incremental CPA.
-- Prioritize Email and Search Ads based on their strong efficiency
-  and conversion performance.
-- Investigate Display Ads conversion tracking before making major
-  budget allocation decisions.
-- Optimize Social Media campaigns to improve conversion efficiency.
-- Review the performance drivers behind the August anomaly and
-  replicate successful patterns observed later in the year.
+1. Reduce Brand Awareness spend, starting with *Back to School* (CPA $108.47).
+2. Scale Sales Activation and Retention gradually while monitoring CPA.
+3. Verify Display Ads conversion tracking before reallocating budget.
+4. Prioritize Email and Search Ads; optimize Social Media (CVR 1.6%) instead of cutting it.
+5. Investigate August and replicate what worked in October to November.
 
----
+## Data Notes
 
-## Tools & Technologies
+- No data for July, so monthly trends show a gap.
+- ROAS uses attributed revenue and does not account for margin.
 
-- **Power BI** — Dashboard & Data Visualization
-- **Power Query** — Data Transformation
-- **DAX** — KPI & Measure Development
-- **Microsoft Excel** — Data Source
+## Tools
 
----
+Power BI · Power Query · DAX · Excel
 
-## Project Structure
+## Repository
 
-```text
-marketing-campaign-powerbi/
-│
-├── Marketing_Campaign_Data.xlsx
-├── Marketing_Campaign_Performance_Analysis.pbix
-├── Marketing_Campaign_Dashboard.pdf
+```
+├── images/                                       # Dashboard screenshots
+├── Marketing_Campaign_Data.xlsx                  # Data source
+├── Marketing_Campaign_Performance_Analysis.pbix  # Power BI file
+├── Marketing_Campaign_Dashboard.pdf              # Exported dashboard
 └── README.md
+```
+
+## Author
+
+**Kieu Anh Nguyen** 
